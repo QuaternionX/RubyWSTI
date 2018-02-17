@@ -4,4 +4,10 @@ Rails.application.routes.draw do
   get '/users', to: "users#index"
 
   get '/contact', to: "contact#index"
+
+  get "/static", to: "static_pages#static"
+
+  get "/mission", to: "static_pages#mission"
+
+  get "/about_us", to: "static_pages#about_us"
 end
