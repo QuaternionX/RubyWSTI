@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get '/test', to: proc { |e| [200, {}, ["ok"]]}
 
-  get '/users', to: "users#index"
+  #get '/users', to: "users#index"
 
   get '/contact', to: "contact#index"
 
@@ -13,6 +13,7 @@ Rails.application.routes.draw do
 
   get "/career", to: "static_pages#career"
 
+  resources :users
   resources :orders
 
   #get "/orders", to: "orders#index"
