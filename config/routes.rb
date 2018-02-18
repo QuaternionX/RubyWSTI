@@ -16,7 +16,8 @@ Rails.application.routes.draw do
   get "/career", to: "static_pages#career"
 
     #resources :users
-  resources :orders
-
+  resources :users do
+    resources :orders
+  end
   #get "/orders", to: "orders#index"
 end
