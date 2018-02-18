@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   #get '/users', to: "users#index"
 
+  devise_for :users
+  root to: "users#index"
   get '/contact', to: "contact#index"
 
   get "/static", to: "static_pages#static"
@@ -13,7 +15,7 @@ Rails.application.routes.draw do
 
   get "/career", to: "static_pages#career"
 
-  resources :users
+    #resources :users
   resources :orders
 
   #get "/orders", to: "orders#index"
