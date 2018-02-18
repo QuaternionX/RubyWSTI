@@ -8,3 +8,10 @@
 
 users = %w(Kasia Maciek Kamil Jan Mati Mirek)
 users.each{|name| User.create(name: name)}
+
+orders = %w(Pizza Frytki Pierogi Kotlet)
+orders.each{|name| Order.create(name: name)}
+
+User.all.each do |user|
+    user.orders.create(name: "Zamowienie #{user.name}")
+end

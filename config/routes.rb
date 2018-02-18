@@ -10,4 +10,10 @@ Rails.application.routes.draw do
   get "/mission", to: "static_pages#mission"
 
   get "/about_us", to: "static_pages#about_us"
+
+  get "/career", to: "static_pages#career"
+
+  resource :orders
+
+  #get "/orders", to: "orders#index"
 end
